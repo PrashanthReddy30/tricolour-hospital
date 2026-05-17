@@ -1,16 +1,18 @@
 :root {
     --primary-blue: #0A1931; /* Deep Navy Blue */
     --primary-blue-light: #15305B;
-    --clinical-white: #F8FAFC;
+    --clinical-white: #F0F4F8; /* Soft clinical ice blue-slate instead of grey white */
     --pure-white: #FFFFFF;
-    --accent-saffron: #FF9933;
-    --accent-green: #138808;
-    --text-dark: #1E293B;
-    --text-light: #64748B;
+    --accent-saffron: #FF9933; /* Indian Tricolour Saffron */
+    --accent-green: #138808; /* Indian Tricolour Green */
+    --accent-blue-light: #E2E8F0;
+    --text-dark: #0F172A; /* High contrast Slate-900 */
+    --text-light: #475569; /* Slate-600 */
     --glass-bg: rgba(255, 255, 255, 0.85);
     --glass-border: rgba(255, 255, 255, 0.3);
-    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+    --shadow-sm: 0 4px 6px -1px rgba(10, 25, 49, 0.03);
+    --shadow-md: 0 8px 20px -3px rgba(10, 25, 49, 0.08);
+    --shadow-lg: 0 16px 32px -4px rgba(10, 25, 49, 0.12);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -27,6 +29,11 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--clinical-white);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(255, 153, 51, 0.03) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(19, 136, 8, 0.03) 0px, transparent 50%),
+        radial-gradient(at 50% 100%, rgba(10, 25, 49, 0.02) 0px, transparent 50%);
+    background-attachment: fixed;
     color: var(--text-dark);
     line-height: 1.6;
 }
@@ -356,7 +363,7 @@ header.scrolled {
 /* Specialties Section */
 .specialties {
     padding: 6rem 0;
-    background-color: var(--clinical-white);
+    background: linear-gradient(180deg, var(--clinical-white) 0%, var(--pure-white) 100%);
 }
 
 .specialties-grid {
@@ -374,7 +381,7 @@ header.scrolled {
     position: relative;
     overflow: hidden;
     z-index: 1;
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(10, 25, 49, 0.05);
 }
 
 .specialty-card::before {
@@ -445,7 +452,7 @@ header.scrolled {
 /* Trust Section */
 .trust-section {
     padding: 6rem 0;
-    background: var(--pure-white);
+    background: linear-gradient(180deg, var(--pure-white) 0%, var(--clinical-white) 100%);
 }
 
 .trust-grid {
@@ -482,6 +489,7 @@ header.scrolled {
     padding: 1.5rem;
     border-radius: 16px;
     box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(10, 25, 49, 0.08);
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -538,10 +546,16 @@ header.scrolled {
     font-size: 0.95rem;
 }
 
+/* Facilities Section */
+.facilities-section {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, var(--clinical-white) 0%, var(--pure-white) 100%);
+}
+
 /* Doctors Section */
 .doctors {
     padding: 6rem 0;
-    background: var(--clinical-white);
+    background: linear-gradient(180deg, var(--pure-white) 0%, var(--clinical-white) 100%);
 }
 
 .doctors-grid {
@@ -555,6 +569,7 @@ header.scrolled {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(10, 25, 49, 0.05);
     transition: var(--transition);
 }
 
@@ -663,17 +678,18 @@ header.scrolled {
 /* Booking Section */
 .booking {
     padding: 6rem 0;
-    background: var(--pure-white);
+    background: linear-gradient(180deg, var(--clinical-white) 0%, var(--pure-white) 100%);
 }
 
 .booking-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    background: var(--clinical-white);
+    background: var(--pure-white);
     border-radius: 24px;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(10, 25, 49, 0.05);
 }
 
 .booking-info {
