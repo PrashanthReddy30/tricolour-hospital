@@ -560,7 +560,7 @@ header.scrolled {
 
 .doctors-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
@@ -882,6 +882,7 @@ footer {
     .trust-grid { grid-template-columns: 1fr; }
     .booking-container { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
+    .doctors-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -889,6 +890,7 @@ footer {
     .mobile-menu-btn { display: block; }
     .hero h1 { font-size: 2.5rem; }
     .footer-grid { grid-template-columns: 1fr; }
+    .doctors-grid { grid-template-columns: 1fr; }
     
     .nav-links.active {
         display: flex;
